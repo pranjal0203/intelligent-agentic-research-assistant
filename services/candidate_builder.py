@@ -26,7 +26,9 @@ def build_pdf_candidates(
     for document, score in retrieved_documents:
         metadata = document.metadata
 
-        source_file_val = metadata.get("source_file") or metadata.get("source") or "Document"
+        source_file_val = (
+            metadata.get("source_file") or metadata.get("source") or "Document"
+        )
         source_file = str(source_file_val)
 
         page = metadata.get("page")
