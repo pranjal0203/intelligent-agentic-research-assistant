@@ -18,7 +18,7 @@ The crew consists of three agents cooperating sequentially:
 
 ## 🛡️ Bounding & Token Safety Guards
 
-To prevent Groq context windows from overflowing and protect operations against strict rate limits, the following parameters are enforced in [`services/crew_service.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/services/crew_service.py):
+To prevent Groq context windows from overflowing and protect operations against strict rate limits, the following parameters are enforced in [`services/crew_service.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/services/crew_service.py):
 
 *   **`max_iter=3` (Max Agent Iterations):** The Specialist is restricted to at most 3 ReAct loops. This prevents loop recursion if search results are noisy.
 *   **Query Count Caps:** The Planner is instructed via system prompts to draft at most 3 core search queries.

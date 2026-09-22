@@ -2,9 +2,9 @@
 # These owners will be automatically requested for review when a Pull Request
 # modifies files matching the pattern.
 
-# By default, @hbhandari247-git owns all files in the repository.
-*       @hbhandari247-git
+# By default, @pranjal0203 owns all files in the repository.
+*       @pranjal0203
 
 # Example: If you add collaborators, you can assign specific owners to directories:
-# /config/  @hbhandari247-git
-# /tests/   @hbhandari247-git
+# /config/  @pranjal0203
+# /tests/   @pranjal0203

@@ -7,29 +7,29 @@ This document provides a map of files in the repository and lists their import/d
 ## 📁 File Structure & Explanations
 
 ### 1. Root Files
-*   [`app.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/app.py) - CLI Entry point. Presents options 1-8 to the user.
-*   [`requirements.txt`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/requirements.txt) - List of application requirements (including `langchain-chroma` for CI).
+*   [`app.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/app.py) - CLI Entry point. Presents options 1-8 to the user.
+*   [`requirements.txt`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/requirements.txt) - List of application requirements (including `langchain-chroma` for CI).
 
 ### 2. Configuration (`config/`)
-*   [`config/settings.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/config/settings.py) - Centralized application configurations (Top-K, models, gateway, thresholds).
-*   [`config/mcp_servers.json`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/config/mcp_servers.json) - MCP stdio connection configurations.
+*   [`config/settings.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/config/settings.py) - Centralized application configurations (Top-K, models, gateway, thresholds).
+*   [`config/mcp_servers.json`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/config/mcp_servers.json) - MCP stdio connection configurations.
 
 ### 3. Models Layer (`models/`)
 Contains type contracts:
-*   [`models/response.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/models/response.py) - Struct Response contracts and refusal mapping string definitions.
-*   [`models/retrieval_candidate.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/models/retrieval_candidate.py) - Shared normalized retrieval candidate class.
+*   [`models/response.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/models/response.py) - Struct Response contracts and refusal mapping string definitions.
+*   [`models/retrieval_candidate.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/models/retrieval_candidate.py) - Shared normalized retrieval candidate class.
 
 ### 4. Service Logic (`services/`)
-*   [`services/crew_service.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/services/crew_service.py) - Orchestrates autonomous Planner/Specialist/Synthesizer Crews.
-*   [`services/memory_service.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/services/memory_service.py) - Local SQLite LTM interface.
-*   [`services/mcp_client.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/services/mcp_client.py) - Dynamic JSON-RPC MCP connector.
-*   [`services/conversation.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/services/conversation.py) - Conversational RAG manager.
-*   [`services/agent.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/services/agent.py) - Single-agent ReAct loop executor.
-*   [`services/question_rewriter.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/services/question_rewriter.py) - Rewrites pronoun follow-up queries.
-*   [`services/response_builder.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/services/response_builder.py) - Normalizes, reranks, fuses context, and handles LLM generation.
-*   [`services/reranker.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/services/reranker.py) - Shared embeddings cosine similarity ranker.
-*   [`services/retriever.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/services/retriever.py) - Chroma vector DB search.
-*   [`services/web_search.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/services/web_search.py) - Tavily web search.
+*   [`services/crew_service.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/services/crew_service.py) - Orchestrates autonomous Planner/Specialist/Synthesizer Crews.
+*   [`services/memory_service.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/services/memory_service.py) - Local SQLite LTM interface.
+*   [`services/mcp_client.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/services/mcp_client.py) - Dynamic JSON-RPC MCP connector.
+*   [`services/conversation.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/services/conversation.py) - Conversational RAG manager.
+*   [`services/agent.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/services/agent.py) - Single-agent ReAct loop executor.
+*   [`services/question_rewriter.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/services/question_rewriter.py) - Rewrites pronoun follow-up queries.
+*   [`services/response_builder.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/services/response_builder.py) - Normalizes, reranks, fuses context, and handles LLM generation.
+*   [`services/reranker.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/services/reranker.py) - Shared embeddings cosine similarity ranker.
+*   [`services/retriever.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/services/retriever.py) - Chroma vector DB search.
+*   [`services/web_search.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/services/web_search.py) - Tavily web search.
 
 ---
 

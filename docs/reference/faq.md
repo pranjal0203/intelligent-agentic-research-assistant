@@ -22,7 +22,7 @@ This document addresses common questions and troubleshooting steps for the Resea
 **A:** This typically happens when the subprocess command cannot run or path arguments are invalid.
 
 #### Troubleshooting:
-1.  Open [`config/mcp_servers.json`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/config/mcp_servers.json).
+1.  Open [`config/mcp_servers.json`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/config/mcp_servers.json).
 2.  Verify the server executable path. If using a Node-based tool, ensure node is installed (`node -v`) and the absolute path to the script is correct.
 3.  Look at the console output logs. If the subprocess exits prematurely, the client will catch the error and fall back to native tools (Chroma/Tavily) without crashing.
 

@@ -85,34 +85,34 @@ When you trigger a deep research topic, the workflow runs completely asynchronou
 ### 1. `models/` (Data Contracts)
 These models define immutable schemas and structured dataclasses to enforce strong typing throughout the workspace:
 
-*   [`models/response.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/models/response.py): Defines the final `Response` payload containing `answer`, `source`, `confidence`, and `citations`. Houses the public `NOT_FOUND_MESSAGE` fallback refusal constant.
-*   [`models/collection.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/models/collection.py): Stores document collection properties (`name`, `path`, `documents`).
-*   [`models/retrieval_candidate.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/models/retrieval_candidate.py): Standardizes evidence segments across both PDF distance matrices and web search relevance outputs.
-*   [`models/tool_call.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/models/tool_call.py) / [`models/tool_result.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/models/tool_result.py): Manages agent tool invocation state.
+*   [`models/response.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/models/response.py): Defines the final `Response` payload containing `answer`, `source`, `confidence`, and `citations`. Houses the public `NOT_FOUND_MESSAGE` fallback refusal constant.
+*   [`models/collection.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/models/collection.py): Stores document collection properties (`name`, `path`, `documents`).
+*   [`models/retrieval_candidate.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/models/retrieval_candidate.py): Standardizes evidence segments across both PDF distance matrices and web search relevance outputs.
+*   [`models/tool_call.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/models/tool_call.py) / [`models/tool_result.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/models/tool_result.py): Manages agent tool invocation state.
 
 ---
 
 ### 2. `services/` (Business Logic & Pipelines)
 
 #### Core Multi-Agent & Memory Layer:
-*   [`services/crew_service.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/services/crew_service.py): Orchestrates CrewAI agents. Defines specific constraints (`max_iter`, output character limits) to safeguard operations against rate limits.
-*   [`services/memory_service.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/services/memory_service.py): Manages SQLite memory initialization (`db/memory.db`) and SQL queries for logging reports and editing preferences.
-*   [`services/mcp_client.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/services/mcp_client.py): Spawns JSON-RPC stdio subprocesses to negotiate dynamic tool bindings.
+*   [`services/crew_service.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/services/crew_service.py): Orchestrates CrewAI agents. Defines specific constraints (`max_iter`, output character limits) to safeguard operations against rate limits.
+*   [`services/memory_service.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/services/memory_service.py): Manages SQLite memory initialization (`db/memory.db`) and SQL queries for logging reports and editing preferences.
+*   [`services/mcp_client.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/services/mcp_client.py): Spawns JSON-RPC stdio subprocesses to negotiate dynamic tool bindings.
 
 #### RAG & Retrieval Layer:
-*   [`services/conversation.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/services/conversation.py): Coordinates the RAG question routing and message memory.
-*   [`services/question_rewriter.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/services/question_rewriter.py): Uses the LLM to rewrite contextual queries into standalone search questions.
-*   [`services/agent.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/services/agent.py): Drives the single-agent ReAct planning loop.
-*   [`services/retriever.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/services/retriever.py): Performs similarity searches inside local Chroma DB.
-*   [`services/web_search.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/services/web_search.py): Queries the Tavily Search API with advanced options.
+*   [`services/conversation.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/services/conversation.py): Coordinates the RAG question routing and message memory.
+*   [`services/question_rewriter.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/services/question_rewriter.py): Uses the LLM to rewrite contextual queries into standalone search questions.
+*   [`services/agent.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/services/agent.py): Drives the single-agent ReAct planning loop.
+*   [`services/retriever.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/services/retriever.py): Performs similarity searches inside local Chroma DB.
+*   [`services/web_search.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/services/web_search.py): Queries the Tavily Search API with advanced options.
 *   **Ranking & Evaluation:**
-    *   [`services/reranker.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/services/reranker.py): Leverages Hugging Face embeddings to compute similarity cosine distances for cross-source sorting.
-    *   [`services/evaluator.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/services/evaluator.py): Scores candidate relevance to assign Confidence values.
+    *   [`services/reranker.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/services/reranker.py): Leverages Hugging Face embeddings to compute similarity cosine distances for cross-source sorting.
+    *   [`services/evaluator.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/services/evaluator.py): Scores candidate relevance to assign Confidence values.
 
 ---
 
 ### 3. `config/` (Parameters)
-*   [`config/settings.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/config/settings.py): Centralizes all configurations, including document chunk sizes, relevance thresholds, models, and AI gateway settings.
+*   [`config/settings.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/config/settings.py): Centralizes all configurations, including document chunk sizes, relevance thresholds, models, and AI gateway settings.
 
 ---
 

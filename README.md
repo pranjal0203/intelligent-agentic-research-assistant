@@ -475,7 +475,7 @@ Assistant locally.
 ## 1. Clone the Repository
 
 ``` bash
-git clone https://github.com/hbhandari247-git/intelligent-agentic-research-assistant.git
+git clone https://github.com/pranjal0203/intelligent-agentic-research-assistant
 
 cd intelligent-agentic-research-assistant
 ```
@@ -575,7 +575,7 @@ To bypass rate limits during testing and enable auto-fallback across multiple AP
    docker run -d -p 20128:20128 -v omniroute-data:/app/data diegosouzapw/omniroute:latest
    ```
 2. Navigate to the dashboard at `http://localhost:20128` (default login is `admin` / `CHANGEME`) and register your credentials under "Providers".
-3. Open [`config/settings.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/config/settings.py) and change the toggle setting:
+3. Open [`config/settings.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/config/settings.py) and change the toggle setting:
    ```python
    USE_OMNIROUTE: bool = True
    ```
@@ -642,7 +642,7 @@ the missing reference is detected before retrieval.
 # 🔌 Model Context Protocol (MCP) Setup
 
 To connect filesystem tools or custom APIs:
-1. Open [`config/mcp_servers.json`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/config/mcp_servers.json).
+1. Open [`config/mcp_servers.json`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/config/mcp_servers.json).
 2. Configure your server command and arguments:
    ```json
    {
@@ -1130,7 +1130,7 @@ development.
 
 # 👨💻 Author
 
-**Himanshu Bhandari**
+**Pranjal Agarwal**
 
 AI Engineer passionate about building production-quality AI systems with
 a strong emphasis on software architecture, Retrieval-Augmented
@@ -1139,8 +1139,7 @@ applications.
 
 ### Connect
 
--   GitHub: https://github.com/hbhandari247-git
--   LinkedIn: https://www.linkedin.com/in/hbhandari247
+-   GitHub: https://github.com/pranjal0203
 
 ------------------------------------------------------------------------
 

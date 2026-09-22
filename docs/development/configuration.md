@@ -1,6 +1,6 @@
 # ⚙️ Application Configurations
 
-All application settings are isolated in a single configuration file [`config/settings.py`](file:///Users/himanshubhandari/Downloads/RTB/RTB_Project_Impetus/intelligent-agentic-research-assistant/config/settings.py).
+All application settings are isolated in a single configuration file [`config/settings.py`](file:///Users/pranjalagarwal/RTB/intelligent-agentic-research-assistant/config/settings.py).
 
 ---
 
